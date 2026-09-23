@@ -27,6 +27,7 @@ let
   mbedtls = callPackage ../mk-pkg-mbedtls/default.nix { };
   dav1d = callPackage ../mk-pkg-dav1d/default.nix { };
   libxml2 = callPackage ../mk-pkg-libxml2/default.nix { };
+  libbs2b = callPackage ../mk-pkg-libbs2b/default.nix { };
   libvorbis = callPackage ../mk-pkg-libvorbis/default.nix { };
   libvpx = callPackage ../mk-pkg-libvpx/default.nix { };
   libx264 = callPackage ../mk-pkg-libx264/default.nix { };
@@ -70,6 +71,7 @@ pkgs.stdenvNoCC.mkDerivation {
   buildInputs =
     [ mbedtls ]
     ++ pkgs.lib.optionals (flavor == flavors.encodersgpl) [
+      libbs2b
       libvorbis
     ]
     ++ pkgs.lib.optionals (variant == variants.video) [

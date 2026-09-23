@@ -34,6 +34,11 @@
     url = "https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.xz";
     sha256 = "f0da0bbfba476c16ae3e1cfd862256d30915911f7abaa1b16ce62ee653192784";
   };
+  libbs2b = {
+    version = "3.1.0";
+    url = "https://downloads.sourceforge.net/project/bs2b/libbs2b/3.1.0/libbs2b-3.1.0.tar.gz";
+    sha256 = "6aaafd81aae3898ee40148dd1349aab348db9bfae9767d0e66e0b07ddd4b2528";
+  };
   libogg = {
     version = "1.3.5";
     url = "https://github.com/xiph/ogg/releases/download/v1.3.5/libogg-1.3.5.tar.gz";

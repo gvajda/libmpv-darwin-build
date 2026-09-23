@@ -38,6 +38,7 @@ if arch != archs.universal then
     ffmpeg = callPackage ../mk-pkg-ffmpeg/default.nix { };
     mbedtls = callPackage ../mk-pkg-mbedtls/default.nix { };
     fftoolsFfi = callPackage ../mk-pkg-fftools-ffi/default.nix { };
+    libbs2b = callPackage ../mk-pkg-libbs2b/default.nix { };
     libvorbis = callPackage ../mk-pkg-libvorbis/default.nix { };
     libogg = callPackage ../mk-pkg-libogg/default.nix { };
     dav1d = callPackage ../mk-pkg-dav1d/default.nix { };
@@ -59,6 +60,7 @@ if arch != archs.universal then
       ]
       ++ pkgs.lib.optionals (flavor == flavors.encodersgpl) [
         fftoolsFfi
+        libbs2b
         libvorbis
         libogg
       ]

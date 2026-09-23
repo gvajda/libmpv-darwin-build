@@ -287,6 +287,7 @@ audio_encodersgpl_options = [
     '--enable-encoders',
     '--enable-muxers',
     '--enable-filters',
+    '--enable-libbs2b', # bauer stereo-to-binaural crossfeed filter
     '--enable-libvorbis',
     # TODO: If audio_encoders is going to exist as its own package, be smarter about what encoders to include
 ]
