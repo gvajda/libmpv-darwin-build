@@ -23,6 +23,11 @@ c_link_args = get_option('c_link_args')
 variant = get_option('variant')
 flavor = get_option('flavor')
 
+# ladspa.h has no pkg-config file; af_ladspa needs only the header (plugins are dlopen'ed at runtime)
+if flavor == 'encodersgpl'
+    c_args += ['-I' + (meson.current_source_dir() / 'rp-ladspa')]
+endif
+
 # options
 disable_all_options = [
     '--disable-autodetect',
@@ -288,6 +293,7 @@ audio_encodersgpl_options = [
     '--enable-muxers',
     '--enable-filters',
     '--enable-libbs2b', # bauer stereo-to-binaural crossfeed filter
+    '--enable-ladspa', # LADSPA host filter; RP Player bridges it to Audio Units
     '--enable-libvorbis',
     # TODO: If audio_encoders is going to exist as its own package, be smarter about what encoders to include
 ]

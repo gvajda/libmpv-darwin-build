@@ -52,6 +52,9 @@ let
     cp ${./meson.build} $src/meson.build
     cp ${./meson.options} $src/meson.options
 
+    mkdir -p $src/rp-ladspa
+    cp ${./ladspa/ladspa.h} $src/rp-ladspa/ladspa.h
+
     cp -r $src $out
   '';
 in
